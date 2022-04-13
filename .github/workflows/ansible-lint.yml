@@ -1,2 +1,2 @@
-- name: Ansible Lint
+- name: AnsibleLint
   uses: ansible-community/ansible-lint-action@v6.0.2
