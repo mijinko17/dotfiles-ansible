@@ -14,7 +14,7 @@
 	"settings": {
 		"files.associations": {
 			// TODO: Specify more detailed matcher.
-			"*.yml": "ansible"
+			"**/playbook/**/*.yml": "ansible"
 		},
 	},
 	// Add the IDs of extensions you want installed when the container is created.
