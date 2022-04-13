@@ -11,10 +11,18 @@
 		}
 	},
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"files.associations": {
+			// TODO: Specify more detailed matcher.
+			"*.yml": "ansible"
+		},
+	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"redhat.ansible",
+		// To format yaml file.
+		// YAML extension's formatter does not work for ansible file.
+		"esbenp.prettier-vscode",
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
