@@ -1,5 +1,4 @@
 - hosts: localhost
-  tasks:
-    - name: include role
-      ansible.builtin.include_role:
-        name: test
+  roles:
+    - test
+    - docker

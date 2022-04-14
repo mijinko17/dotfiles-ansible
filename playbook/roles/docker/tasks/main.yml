@@ -1,0 +1,9 @@
+- name: install dependencies
+  become: true
+  ansible.builtin.apt:
+    name: '{{ item }}'
+  loop:
+    - ca-certificates
+    - curl
+    - gnupg
+    - lsb-release
