@@ -17,6 +17,7 @@
 			"**/playbook/**/*.yml": "ansible"
 		},
 		"prettier.singleQuote": true,
+		"yaml.format.singleQuote": true,
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
