@@ -74,16 +74,18 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["cmp-path"] = {
-    after_files = { "/home/yuki/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
-    config = { "\27LJ\2\2]\0\0\4\0\6\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0004\2\3\0005\3\3\0>\3\1\2=\2\5\1B\0\2\1K\0\1\0\fsources\1\0\0\1\0\1\tname\tpath\nsetup\bcmp\frequire\0" },
-    load_after = {},
+  ["cmp-nvim-lsp"] = {
     loaded = true,
-    needs_bufread = false,
-    path = "/home/yuki/.local/share/nvim/site/pack/packer/opt/cmp-path",
+    path = "/home/yuki/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/yuki/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   ["nvim-cmp"] = {
+    config = { "\27LJ\2\2v\0\0\4\0\a\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\5\0004\2\3\0005\3\3\0>\3\1\0025\3\4\0>\3\2\2=\2\6\1B\0\2\1K\0\1\0\fsources\1\0\0\1\0\1\tname\rnvim_lsp\1\0\1\tname\tpath\nsetup\bcmp\frequire\0" },
     loaded = true,
     path = "/home/yuki/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
@@ -123,23 +125,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: vim-hybrid-material
-time([[Config for vim-hybrid-material]], true)
-try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0 colorscheme hybrid_material\bcmd\bvim\0", "config", "vim-hybrid-material")
-time([[Config for vim-hybrid-material]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\2«\1\0\0\6\0\n\0\0206\0\0\0'\1\1\0B\0\2\0026\1\2\0009\1\3\0019\1\4\1'\2\5\0'\3\6\0009\4\a\0004\5\0\0B\1\5\0016\1\2\0009\1\3\0019\1\4\1'\2\5\0'\3\b\0009\4\t\0004\5\0\0B\1\5\1K\0\1\0\14live_grep\14<leader>f\15find_files\14<leader>p\6n\bset\vkeymap\bvim\22telescope.builtin\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-cmp ]]
-vim.cmd [[ packadd cmp-path ]]
-
--- Config for: cmp-path
-try_loadstring("\27LJ\2\2]\0\0\4\0\6\0\v6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0004\2\3\0005\3\3\0>\3\1\2=\2\5\1B\0\2\1K\0\1\0\fsources\1\0\0\1\0\1\tname\tpath\nsetup\bcmp\frequire\0", "config", "cmp-path")
-
-time([[Sequenced loading]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\2v\0\0\4\0\a\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\5\0004\2\3\0005\3\3\0>\3\1\0025\3\4\0>\3\2\2=\2\6\1B\0\2\1K\0\1\0\fsources\1\0\0\1\0\1\tname\rnvim_lsp\1\0\1\tname\tpath\nsetup\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: vim-hybrid-material
+time([[Config for vim-hybrid-material]], true)
+try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0 colorscheme hybrid_material\bcmd\bvim\0", "config", "vim-hybrid-material")
+time([[Config for vim-hybrid-material]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
