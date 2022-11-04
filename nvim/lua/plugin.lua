@@ -31,12 +31,12 @@ return require('packer').startup(function(use)
   }
   use{
     'hrsh7th/nvim-cmp',
-  }
-  use{
-    'hrsh7th/cmp-path',
-    after = 'nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-nvim-lsp',
+    },
     config = function()
-      require'cmp'.setup { sources = {{ name = 'path' }}}
+      require'cmp'.setup { sources = {{ name = 'path' }, { name = 'nvim_lsp' }}}
     end
   }
   if packer_bootstrap then
